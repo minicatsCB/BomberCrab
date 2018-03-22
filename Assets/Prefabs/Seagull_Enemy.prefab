@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcbcf1a027f59a4d91061962f76e82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+  PunchedClip: {fileID: 8300000, guid: 9ce30267ab70ebd4eb2dfea745fa0f4e, type: 3}
+  PlayerKilledClip: {fileID: 8300000, guid: 01178ddaab2a70447aba4ef6634b3d4a, type: 3}
 --- !u!212 &212288497719585284
 SpriteRenderer:
   m_ObjectHideFlags: 1

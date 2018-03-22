@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DestroyByContact : MonoBehaviour {
+	public AudioClip PunchedClip, PlayerKilledClip;	// El sonido al ser golpeado
+
 	private Text _scoreGUI;	// El texto del score
 
 	void Start(){
@@ -17,6 +19,8 @@ public class DestroyByContact : MonoBehaviour {
 			// Si el enemigo está dentro del límite de juego, no se destruye (:V)
 			return;
 		} else if(col.gameObject.layer == Layers.Player && PlayerMovement.isAtacking()){
+			AudioSource.PlayClipAtPoint(PunchedClip, transform.position);
+
 			// Si estamos atacando y chocamos con el enemigo, el enemigo muere
 			PersistentData.Score++;
 
@@ -27,7 +31,8 @@ public class DestroyByContact : MonoBehaviour {
 		} else if (col.gameObject.layer == Layers.Player && !PlayerMovement.isAtacking()) {
 			// Si NO estamos atacando y chocamos con el enemigo, morimos nosotros
 			// TODO GameOver (poner explosion o algo)
-			Debug.Log("Game Over");
+			AudioSource.PlayClipAtPoint(PlayerKilledClip, col.gameObject.transform.position);
+			PersistentData._isPlayerDead = true;
 		}
 	}
 }

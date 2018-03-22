@@ -1,0 +1,480 @@
+fileFormatVersion: 2
+guid: a6ad2fa58a5dde3488f078e124d59e8a
+timeCreated: 1521759190
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Custom Edited - Wario Customs - Octopus_0
+    21300002: Custom Edited - Wario Customs - Octopus_1
+    21300004: Custom Edited - Wario Customs - Octopus_2
+    21300006: Custom Edited - Wario Customs - Octopus_3
+    21300008: Custom Edited - Wario Customs - Octopus_4
+    21300010: Custom Edited - Wario Customs - Octopus_5
+    21300012: Custom Edited - Wario Customs - Octopus_6
+    21300014: Custom Edited - Wario Customs - Octopus_7
+    21300016: Custom Edited - Wario Customs - Octopus_8
+    21300018: Custom Edited - Wario Customs - Octopus_9
+    21300020: Custom Edited - Wario Customs - Octopus_10
+    21300022: Custom Edited - Wario Customs - Octopus_11
+    21300024: Custom Edited - Wario Customs - Octopus_12
+    21300026: Custom Edited - Wario Customs - Octopus_13
+    21300028: Custom Edited - Wario Customs - Octopus_14
+    21300030: Custom Edited - Wario Customs - Octopus_15
+    21300032: Custom Edited - Wario Customs - Octopus_16
+    21300034: Custom Edited - Wario Customs - Octopus_17
+    21300036: Custom Edited - Wario Customs - Octopus_18
+    21300038: Custom Edited - Wario Customs - Octopus_19
+    21300040: Custom Edited - Wario Customs - Octopus_20
+    21300042: Custom Edited - Wario Customs - Octopus_21
+    21300044: Custom Edited - Wario Customs - Octopus_22
+    21300046: Custom Edited - Wario Customs - Octopus_23
+    21300048: Custom Edited - Wario Customs - Octopus_24
+    21300050: Custom Edited - Wario Customs - Octopus_25
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 310
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 310
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 310
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 310
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 310
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 310
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_6
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 309
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 270
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 270
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 270
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_10
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 268
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_11
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 268
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_12
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 212
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_13
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 212
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_14
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 213
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_15
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 172
+        width: 43
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_16
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 143
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_17
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 142
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_18
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 142
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_19
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 104
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_20
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 80
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_21
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 80
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 80
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_23
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 14
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_24
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 15
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Custom Edited - Wario Customs - Octopus_25
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 13
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
