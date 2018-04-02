@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-	// TODO poner que se vayan guardando en un padre, para tener más organizada la escena
 	public GameObject[] Enemies;
 	public float FallingSpeed = 3;	// La velocidad a la que caen los enemigos
 	public float spawnWait = 1;	// Tiempo que pasa entre que sale un enemigo y otro
@@ -14,6 +13,8 @@ public class GameController : MonoBehaviour {
 	public GameObject groundPrefab;
 	private int _mapHeight = 16;
 	private int _mapWidth = 10;
+
+	private Transform _enemiesParent;	// Para agrupar los enemigos creados y mantener organizada la escena
 
 	void Awake(){
 		// Creamos trablero
@@ -31,6 +32,8 @@ public class GameController : MonoBehaviour {
 			}
 			rowTransform.parent = mapParent;
 		}
+
+		_enemiesParent = new GameObject ("Enemies").transform;
 	}
 
 	// Use this for initialization
@@ -47,6 +50,7 @@ public class GameController : MonoBehaviour {
 				Vector3 spawnPosition = new Vector3 (Random.Range (Boundary.xMin, Boundary.xMax), Boundary.yMax, 0);
 				Quaternion spawnRotation = Quaternion.identity;
 				GameObject go = Instantiate(Enemies [Random.Range (0, Enemies.Length)], spawnPosition, spawnRotation);
+				go.transform.parent = _enemiesParent;
 				go.GetComponent<Rigidbody2D>().velocity = -go.transform.up * FallingSpeed;	// Los enemigos van cayendo
 				yield return new WaitForSeconds(spawnWait);
 			}

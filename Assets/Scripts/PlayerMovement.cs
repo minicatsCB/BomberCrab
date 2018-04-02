@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		// Ataca
-		// TODO lanzar animación de ataque
 		if(Input.GetKeyDown(KeyCode.LeftControl)){
 			Debug.Log ("Atacking!");
 			isAtackingState = true;

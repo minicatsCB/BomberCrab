@@ -37,6 +37,7 @@ public class SceneManagement : MonoBehaviour {
 			LoadScene (0);
 			PersistentData._isPlayerDead = false;	// Recuperamos la vida y empezamos de nuevo. TODO quitarle el guión a las variables de PersistentData porque son públicas
 			PersistentData.Score = 0;
+			PersistentData.Lifes = 3;
 			_audio.Stop();
 		}
 	}

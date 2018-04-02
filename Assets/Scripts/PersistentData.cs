@@ -8,4 +8,5 @@ public class PersistentData {
 	public static bool _isSecondLevelLoaded = false;
 	public static bool _isThirdLevelLoaded = false;
 	public static bool _isPlayerDead = false;
+	public static int Lifes = 3;
 }

@@ -20,7 +20,6 @@ public class UrchinEnemy : MonoBehaviour {
 		Collider2D col = Physics2D.OverlapCircle (new Vector2 (transform.position.x, transform.position.y), GuardRadius, 1 << Layers.Player);
 
 		if (col != null) {
-			// TODO o le quita una vida?
 			Debug.Log ("Jugador alcanzado por erizo");
 
 			iTween.PunchScale (gameObject, iTween.Hash ("amount", Vector3.one * .8f, "looptype", iTween.LoopType.loop, "time", PursueSpeed / 5));
