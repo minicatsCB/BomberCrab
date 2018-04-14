@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class DestroyByContact : MonoBehaviour {
 	public AudioClip PunchedClip, PlayerKilledClip;	// El sonido al ser golpeado
-	public int BossLifes = 10;	// La vida que le tengo que quitar al jefe para matarlo
 
 	private GameObject _scoreCanvas;
 	private Color _originalBossColor;
 	private Color _originalPlayerColor;
 
 	void Start(){
-		BossLifes = 3;
 		_originalBossColor = GetComponent<SpriteRenderer> ().color;
 	}
 
 	void Update(){
-		if (BossLifes == 0) {
+		if (PersistentData.BossLifes == 0) {
 			GameObject go = GameObject.FindGameObjectWithTag ("Boss");
 			if (go != null) {
 				Destroy (go);
@@ -35,9 +33,9 @@ public class DestroyByContact : MonoBehaviour {
 
 			// Si estoy atacando al jefe, necesito quitarle más vidas que al resto de enemigos para matarlo
 			if (gameObject.tag == "Boss") {
-				BossLifes--;
+				PersistentData.BossLifes--;
 				iTween.ColorTo (gameObject, Color.red, 1);
-				Debug.Log ("BOSS lifes: " + BossLifes);
+				Debug.Log ("BOSS lifes: " + PersistentData.BossLifes);
 			} else {
 				// El resto de enemigos se destruyen al primer ataque
 				Destroy (gameObject);

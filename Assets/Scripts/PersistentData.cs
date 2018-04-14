@@ -12,4 +12,5 @@ public class PersistentData {
 	public static bool IsPlayerDead = false;
 	public static bool IsBossDead = false;
 	public static int Lifes = 3;
+	public static int BossLifes = 3;
 }
