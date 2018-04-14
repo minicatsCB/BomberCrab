@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundScroller : MonoBehaviour {
-	public float ScrollSpeed;
-	public float TileSizeZ;
+	public float ScrollSpeed;	// A qué velocidad quiero que se mueva el fondo
+	public float TileSizeY;	// Cada cuánta distancia en Y quiero comenzar de nuevo el loop
 
 	private Vector3 _startPosition;
 
@@ -15,7 +15,8 @@ public class BackgroundScroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float newPosition = Mathf.Repeat (Time.time * ScrollSpeed, TileSizeZ);
-		transform.position = _startPosition + Vector3.forward * newPosition;
+		// Mathf.Repeat() es como un módulo para números decimales
+		float newPosition = Mathf.Repeat (Time.time * ScrollSpeed, TileSizeY);
+		transform.position = _startPosition + Vector3.up * newPosition;
 	}
 }

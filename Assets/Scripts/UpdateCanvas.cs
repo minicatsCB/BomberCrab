@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class UpdateCanvas : MonoBehaviour {
 	private Text _scoreGUIText;	// El texto del score
-	private Text _lifesGUIText;	// El text de las vidas restantes
+	private Text _lifesGUIText;	// El textt de las vidas restantes
+	private Text _bossLifesGUIText;	// El texto de las vidas restantes del boss
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,10 @@ public class UpdateCanvas : MonoBehaviour {
 		} else {
 			Debug.LogWarning ("No hay ningún objeto con la etiquetas LifesText. Por favor, comprueba que está asignada en el editor a el objeto correpondiente.");
 		}
+	}
+
+	void Update(){
+		UpdateScore ();
 	}
 
 	// Se llama desde el Detect By Contact

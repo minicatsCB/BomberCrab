@@ -7,7 +7,8 @@ public class GameController : MonoBehaviour {
 	public float FallingSpeed = 3;	// La velocidad a la que caen los enemigos
 	public float spawnWait = 1;	// Tiempo que pasa entre que sale un enemigo y otro
 	public float startWait = 1;	// Tiempo entre una oleada y otra
-	public float waveWait = 1;	// Frecuencia de las oledas. TODO acortar la frecuencia conforme vamos avanzando de nivel
+	public float waveWait = 1;	// Frecuencia de las oledas
+	public GameObject CoconutPrefab;
 
 	// Mapa
 	public GameObject groundPrefab;
@@ -15,8 +16,10 @@ public class GameController : MonoBehaviour {
 	private int _mapWidth = 10;
 
 	private Transform _enemiesParent;	// Para agrupar los enemigos creados y mantener organizada la escena
+	private Transform _palmTreesParent;	// Objeto que agrupa todas las palmeras
 
 	void Awake(){
+		/*
 		// Creamos trablero
 		// Creamos un objeto en la jerarquía llamado map que va a contener todas las filas del suelo intanciadas
 		Transform mapParent = new GameObject("Map").transform;
@@ -32,13 +35,17 @@ public class GameController : MonoBehaviour {
 			}
 			rowTransform.parent = mapParent;
 		}
+		*/
 
 		_enemiesParent = new GameObject ("Enemies").transform;
+		GameObject palmTreesParent = GameObject.FindGameObjectWithTag ("PalmTrees");
+		_palmTreesParent = palmTreesParent.transform;
 	}
 
 	// Use this for initialization
 	void Start () {
 		StartCoroutine (SpawnWaves());
+		StartCoroutine (ThrowCoconuts ());
 	}
 
 	private IEnumerator SpawnWaves(){
@@ -57,13 +64,19 @@ public class GameController : MonoBehaviour {
 			yield return new WaitForSeconds (waveWait);
 		}
 	}
+
+	private IEnumerator ThrowCoconuts(){
+		yield return new WaitForSeconds (startWait);
+		while (true) {
+			Debug.Log ("Nueva oleada");
+			// Elegimos aleatoriamente una palmera de todas las que hay en la escena
+			int randomPalmTreeIndex = Random.Range (0, _palmTreesParent.childCount - 1);
+			// Instanciamos un coco en esa posición
+			Vector3 spawnPosition = _palmTreesParent.GetChild(randomPalmTreeIndex).transform.position;
+			Quaternion spawnRotation = Quaternion.identity;
+			GameObject go = Instantiate(CoconutPrefab, spawnPosition, spawnRotation);
+			go.GetComponent<Rigidbody2D>().velocity = -go.transform.up * FallingSpeed;	// El coco cae en la arena y ya está
+			yield return new WaitForSeconds (waveWait);
+		}
+	}
 }
-
-
-/*
-Partimos desde el menú, En ningún nivel pongo GameController. Le asignamos la etiqueta "GameController" al objeto GameController.
-Entonces el player puede hacer un GameObject.FindWithTag("GameController") y crear uno cuando abrimos la escena.
-
-
-Lo podemos crear en el primer nivel. Si obtenemos un objeto, ya lo tenemos, si no, habría que crearlo.
-*/

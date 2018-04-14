@@ -32,11 +32,11 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		// Ataca
-		if(Input.GetKeyDown(KeyCode.LeftControl)){
+		if(Input.GetKey(KeyCode.LeftControl)){
 			Debug.Log ("Atacking!");
 			isAtackingState = true;
 			_anim.SetBool ("isAtacking", isAtackingState);
-		} else if(Input.GetKeyUp(KeyCode.LeftControl)){
+		} else {
 			isAtackingState = false;
 			_anim.SetBool ("isAtacking", isAtackingState);
 		}

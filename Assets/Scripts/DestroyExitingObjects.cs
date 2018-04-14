@@ -5,7 +5,6 @@ using UnityEngine;
 public class DestroyExitingObjects : MonoBehaviour {
 
 	void Start(){
-		DontDestroyOnLoad (gameObject);
 	}
 
 	public void OnTriggerExit2D(Collider2D col){

@@ -7,46 +7,58 @@ public class DestroyByContact : MonoBehaviour {
 	public int BossLifes = 10;	// La vida que le tengo que quitar al jefe para matarlo
 
 	private GameObject _scoreCanvas;
-	private UpdateCanvas _canvasUpdater;	// Para actualizar la puntación mostrada en el canvas
+	private Color _originalBossColor;
+	private Color _originalPlayerColor;
 
 	void Start(){
-		BossLifes = 10;
-		_scoreCanvas = GameObject.FindGameObjectWithTag ("ScoreCanvas");
-		_canvasUpdater = _scoreCanvas.GetComponent<UpdateCanvas> ();
+		BossLifes = 3;
+		_originalBossColor = GetComponent<SpriteRenderer> ().color;
+	}
+
+	void Update(){
+		if (BossLifes == 0) {
+			GameObject go = GameObject.FindGameObjectWithTag ("Boss");
+			if (go != null) {
+				Destroy (go);
+				PersistentData._isBossDead = true;
+			}
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.layer == Layers.Player && PlayerMovement.isAtacking()){
 			AudioSource.PlayClipAtPoint(PunchedClip, transform.position);
+			Debug.Log ("Jugador golpeó y alcanzó");
 
 			// Si estamos atacando y chocamos con el enemigo, el enemigo muere
 			PersistentData.Score++;
 
-			// Actualizamos los datos mostrados en el canvas
-			_canvasUpdater.UpdateScore ();
-
 			// Si estoy atacando al jefe, necesito quitarle más vidas que al resto de enemigos para matarlo
 			if (gameObject.tag == "Boss") {
-				/*if (BossLifes > 0) {
-					Debug.Break ();
-					BossLifes--;
-				} else {
-					Destroy (gameObject);
-				}*/
+				BossLifes--;
+				iTween.ColorTo (gameObject, Color.red, 1);
+				Debug.Log ("BOSS lifes: " + BossLifes);
 			} else {
+				// El resto de enemigos se destruyen al primer ataque
 				Destroy (gameObject);
 			}
 		} else if (col.gameObject.layer == Layers.Player && !PlayerMovement.isAtacking()) {
 			// Si NO estamos atacando y chocamos con el enemigo, morimos nosotros
-			// TODO GameOver (poner explosion o algo)
 			PersistentData.Lifes--;
-			_canvasUpdater.UpdateScore ();
 			AudioSource.PlayClipAtPoint(PlayerKilledClip, col.gameObject.transform.position);
+			Debug.Log ("Jugador FUE golpeado y alcanzado");
 
 			Debug.Log ("Vida: " + PersistentData.Lifes);
 			if (PersistentData.Lifes <= 0) {
 				PersistentData._isPlayerDead = true;
 			}
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D col){
+		// Cuando nos alejamos del boss después de darle un golpe, este recupera su color original
+		if (col.gameObject.layer == Layers.Player && gameObject.tag == "Boss") {
+			iTween.ColorTo (gameObject, _originalBossColor, 1);
 		}
 	}
 }

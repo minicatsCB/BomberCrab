@@ -22,7 +22,7 @@ public class ShowDiscoveredPath : MonoBehaviour {
 		if (Vector3.Distance (_lastPosition, transform.position) >= _distance) {
 			Debug.Log ("Crear tile");
 			// Creo una tile en la posición del jugdor
-			Vector3 spawnPosition = new Vector3 (transform.position.x, transform.position.y, -1);	// TODO utilizar sorting layers?
+			Vector3 spawnPosition = new Vector3 (transform.position.x, transform.position.y, -1);
 			Quaternion spawnRotation = Quaternion.Euler (new Vector3 (-90, 0, 0));
 			GameObject tile = Instantiate(TrailTile, spawnPosition, spawnRotation);
 			// La dejo ahí durante 5 segundos
