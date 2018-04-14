@@ -18,44 +18,44 @@ public class SceneManagement : MonoBehaviour {
 	}
 
 	void Update(){
-		if (!PersistentData._isPlayerDead) {
+		if (!PersistentData.IsPlayerDead) {
 			// Antes de cargar una escena una vez conseguida la punutación necesaria, comprobar que no se ha cargado ya
-			if (PersistentData.Score == 0 && PersistentData._isFirstLevelLoaded) {
+			if (PersistentData.Score == 0 && PersistentData.IsFirstLevelLoaded) {
 				// Si se acaba de cargar el primer nivel, lanza su música respectiva
 				_audio.clip = FirstLevelBackgroundMusic;
 				_audio.PlayDelayed (1);
-				PersistentData._isFirstLevelLoaded = false;
-			} else if (PersistentData.Score == ScoreToSecondLevel && !PersistentData._isSecondLevelLoaded) {
+				PersistentData.IsFirstLevelLoaded = false;
+			} else if (PersistentData.Score == ScoreToSecondLevel && !PersistentData.IsSecondLevelLoaded) {
 				LoadScene (2);
-				PersistentData._isSecondLevelLoaded = true;
-			} else if (PersistentData.Score == ScoreToThirdLevel && !PersistentData._isThirdLevelLoaded) {
+				PersistentData.IsSecondLevelLoaded = true;
+			} else if (PersistentData.Score == ScoreToThirdLevel && !PersistentData.IsThirdLevelLoaded) {
 				LoadScene (3);
 				_audio.clip = ThirdLevelBackgroundMusic;
 				_audio.Play ();
-				PersistentData._isThirdLevelLoaded = true;
+				PersistentData.IsThirdLevelLoaded = true;
 			}
 		} else {
 			Time.timeScale = 0;
 			_audio.Stop();
-			if (!PersistentData._isGameOverScreenLoaded) {
+			if (!PersistentData.IsGameOverScreenLoaded) {
 				LoadScene (4);
-				PersistentData._isGameOverScreenLoaded = true;
+				PersistentData.IsGameOverScreenLoaded = true;
 			}
 		}
 
-		if (PersistentData._isBossDead) {
-			if (!PersistentData._isWinScreenLoaded) {
+		if (PersistentData.IsBossDead) {
+			if (!PersistentData.IsWinScreenLoaded) {
 				LoadScene (5);
 				_audio.clip = PlayerWonClip;
 				_audio.Play ();
-				PersistentData._isWinScreenLoaded = true;
+				PersistentData.IsWinScreenLoaded = true;
 			}
 		}
 	}
 
 	public void StartGame(){
 		LoadScene (1);
-		PersistentData._isFirstLevelLoaded = true;
+		PersistentData.IsFirstLevelLoaded = true;
 	}
 
 	private void LoadScene(int index){

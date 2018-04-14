@@ -20,7 +20,7 @@ public class DestroyByContact : MonoBehaviour {
 			GameObject go = GameObject.FindGameObjectWithTag ("Boss");
 			if (go != null) {
 				Destroy (go);
-				PersistentData._isBossDead = true;
+				PersistentData.IsBossDead = true;
 			}
 		}
 	}
@@ -50,7 +50,7 @@ public class DestroyByContact : MonoBehaviour {
 
 			Debug.Log ("Vida: " + PersistentData.Lifes);
 			if (PersistentData.Lifes <= 0) {
-				PersistentData._isPlayerDead = true;
+				PersistentData.IsPlayerDead = true;
 			}
 		}
 	}
