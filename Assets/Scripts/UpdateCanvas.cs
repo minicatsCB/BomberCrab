@@ -9,7 +9,7 @@ public class UpdateCanvas : MonoBehaviour {
 	private Text _bossLifesGUIText;	// El texto de las vidas restantes del boss
 	private GameObject _pauseButton;	// El botón del menú de pausa
 
-	private string _warningMessage = "Por favor, comprueba que la siguiente etiqueta está asignada en el editor a el objeto correpondiente: ";
+	private string _warningMessage = "Por favor, comprueba que la siguiente etiqueta está asignada en el editor al objeto correpondiente: ";
 
 	private bool _gamePaused = false;
 
