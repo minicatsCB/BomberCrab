@@ -10,11 +10,6 @@ public class GameController : MonoBehaviour {
 	public float waveWait = 1;	// Frecuencia de las oledas
 	public GameObject CoconutPrefab;
 
-	// Mapa
-	public GameObject groundPrefab;
-	private int _mapHeight = 16;
-	private int _mapWidth = 10;
-
 	private Transform _enemiesParent;	// Para agrupar los enemigos creados y mantener organizada la escena
 	private Transform _palmTreesParent;	// Objeto que agrupa todas las palmeras
 

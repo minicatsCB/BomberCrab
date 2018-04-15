@@ -47,6 +47,7 @@ public class SceneManagement : MonoBehaviour {
 			if (!PersistentData.IsWinScreenLoaded) {
 				LoadScene (5);
 				_audio.clip = PlayerWonClip;
+				_audio.loop = false;	// Queremos que este audio se reproduzca solo una vez
 				_audio.Play ();
 				PersistentData.IsWinScreenLoaded = true;
 			}

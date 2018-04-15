@@ -7,8 +7,11 @@ public class UpdateCanvas : MonoBehaviour {
 	private Text _scoreGUIText;	// El texto del score
 	private Text _lifesGUIText;	// El textt de las vidas restantes
 	private Text _bossLifesGUIText;	// El texto de las vidas restantes del boss
+	private GameObject _pauseButton;	// El botón del menú de pausa
 
 	private string _warningMessage = "Por favor, comprueba que la siguiente etiqueta está asignada en el editor a el objeto correpondiente: ";
+
+	private bool _gamePaused = false;
 
 	// Use this for initialization
 	void Start () {
@@ -38,17 +41,34 @@ public class UpdateCanvas : MonoBehaviour {
 			_bossLifesGUIText = _bossLifesGUI.GetComponent<Text> ();
 			_bossLifesGUIText.text = "Boss lifes: " + PersistentData.BossLifes;
 		} else {
+			// Para que este aviso solo pueda salir en el nivel final
 			if (PersistentData.IsThirdLevelLoaded) {
 				Debug.LogWarning (_warningMessage + "BossLifesText");
 			}
+		}
+
+		_pauseButton = GameObject.FindGameObjectWithTag ("PauseButton");
+		if (_pauseButton != null) {
+			_pauseButton.SetActive (false);
 		}
 	}
 
 	void Update(){
 		UpdateScore ();
 
-		// Si ganamos, desactivamos el canvas para que no se vea
-		if (PersistentData.IsWinScreenLoaded) {
+		// Pausa el juego si pulsamos la barra espaciadora
+		if (Input.GetKeyDown (KeyCode.Space) && !_gamePaused) {
+			if (!_gamePaused) {
+				Time.timeScale = 0;
+				if (_pauseButton != null) {
+					_pauseButton.SetActive (true);
+				}
+				_gamePaused = true;
+			}
+		}
+
+		// Si morimos o ganamos, desactivamos el canvas para que no se vea
+		if (PersistentData.IsGameOverScreenLoaded || PersistentData.IsWinScreenLoaded) {
 			gameObject.SetActive (false);
 		}
 	}
@@ -76,5 +96,13 @@ public class UpdateCanvas : MonoBehaviour {
 				Debug.LogWarning (_warningMessage + "BossLifesText");
 			}
 		}
+	}
+
+	public void ResumeGame(){
+		Time.timeScale = 1;
+		if (_pauseButton != null) {
+			_pauseButton.SetActive (false);
+		}
+		_gamePaused = false;
 	}
 }
